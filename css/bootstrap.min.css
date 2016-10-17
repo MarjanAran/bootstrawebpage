@@ -1606,7 +1606,7 @@ a.text-danger:focus,a.text-danger:hover {
 
 .bg-primary {
     color: #fff;
-    background-color: rgb(154, 108, 108);
+    background-color: #4CAF50
 }
 
 a.bg-primary:focus,a.bg-primary:hover {
@@ -3519,7 +3519,7 @@ a.btn.disabled,fieldset[disabled] a.btn {
 
 .btn-success {
     color: #fff;
-    background-color: #5cb85c;
+    background-color: #222;
     border-color: #4cae4c
 }
 
@@ -3530,9 +3530,9 @@ a.btn.disabled,fieldset[disabled] a.btn {
 }
 
 .btn-success:hover {
-    color: #fff;
-    background-color: #449d44;
-    border-color: #398439
+    color: #222;
+    background-color: #5dffee;
+    border-color: #5dffee
 }
 
 .btn-success.active,.btn-success:active,.open>.dropdown-toggle.btn-success {
@@ -3933,6 +3933,8 @@ tbody.collapse.in {
     border-bottom: 4px dashed;
     border-bottom: 4px solid\9
 }
+
+
 
 .dropup .dropdown-menu,.navbar-fixed-bottom .dropdown .dropdown-menu {
     top: auto;

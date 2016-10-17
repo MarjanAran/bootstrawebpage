@@ -39,26 +39,8 @@
         <nav class="navbar navbar-inverse navbar-fixed-top">
           <div class="container">
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#"><em>M. Krasnytska</em></a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#impact">Impact</a></li>
-                <li><a href="#interests">Interests</a></li>
-                <li><a href="#contacts">Contacts</a></li>
-                </ul>
-                
-                <ul class="nav navbar-nav navbar-right navbar-lang"> 
+              
+              <ul class="nav navbar-nav navbar-left navbar-lang"> 
                 <li> 
                 <a class="navbar-brand" href="javascript:void(0);" title="fr" onclick=""> <span class="badge small">EN </span> </a></li>
                 <li>
@@ -66,12 +48,39 @@
                 <li> 
                 <a class="navbar-brand" href="indexua.html" title="fr" onclick=""> <span class="badge small">UA </span> </a></li> 
                 </ul>
-                
-                </div>
-                
             </div>
-        </nav>
-
+            
+             <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav list-unstyled">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="#top" onclick=$("#menu-close").click();>MENU</a>
+            </li>
+            <li> 
+                <a href="#top" onclick=$("#menu-close").click();>  <img src="img/home-icon-silhouette.svg" alt="home icon" width="20" height="20"> Home</a>
+            </li>
+            <li>
+                <a href="#about" onclick=$("#menu-close").click();> <img src="img/user.svg" alt="user logo women" width="20" height="20"> About</a>
+            </li>
+            <li>
+                <a href="#research" onclick=$("#menu-close").click();> <img src="img/share.svg" alt="network model nodesand links" width="20" height="20">  Research</a>
+            </li>
+            <li>
+                <a href="#publications" onclick=$("#menu-close").click();> <img src="img/3d-dictionary.svg" alt="3d-dictionary icon" width="20" height="20">  Publications</a>
+            </li>
+            <li>
+                <a href="#impact" onclick=$("#menu-close").click();> <img src="img/newspaper-report.svg" alt="newspaper logo" width="20" height="20">  Impact</a>
+            </li>
+            <li>
+                <a href="#interests" onclick=$("#menu-close").click();> <img src="img/paint-board-and-brush.svg" alt="paint board and brush" width="20" height="20">  Interests</a>
+            </li>
+            <li>
+                <a href="#contacts" onclick=$("#menu-close").click();> <img src="img/contacts.svg" alt="notebook with phone logo" width="20" height="20">  Contacts</a>
+            </li>
+        </ul>
+    </nav>
+    </nav>
       </div>
     </div>
 
@@ -109,10 +118,6 @@
     </section>
 
    
-    <!-- Callout -->
-    <aside class="callout3">
-    </aside>
-    
     
     <section id="research" class="services bg-primary">
         <div class="container">
@@ -458,9 +463,9 @@
                                   <label for="comment"><b>Message:</b></label><br>
                                   <textarea id="comment" required></textarea>
                                   <br>
-                                  <label for="submit">Submit form?</label><br>
-                                  <input type="submit" id="submit" value="Ok">
-                                  <input type="button" id="submit2" value="Cancel" onClick="history.go(0)">
+                                  <label for="submit">Submit?</label><br>
+                                  <input type="submit" class="btn-dark" id="submit" value="OK">
+                                  <input type="button" class="btn-dark" id="submit2" value="Cancel" onClick="history.go(0)">
                                    </fieldset>
                                </form>
                             </div>
@@ -488,60 +493,9 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
-    //#to-top button appears after scrolling
-    var fixed = false;
-    $(document).scroll(function() {
-        if ($(this).scrollTop() > 250) {
-            if (!fixed) {
-                fixed = true;
-                // $('#to-top').css({position:'fixed', display:'block'});
-                $('#to-top').show("slow", function() {
-                    $('#to-top').css({
-                        position: 'fixed',
-                        display: 'block'
-                    });
-                });
-            }
-        } else {
-            if (fixed) {
-                fixed = false;
-                $('#to-top').hide("slow", function() {
-                    $('#to-top').css({
-                        display: 'none'
-                    });
-                });
-            }
-        }
-    })
-    </script>
-
+    <script src="js/scripts.js"></script>
+    
+    
 </body>
 
 </html>
