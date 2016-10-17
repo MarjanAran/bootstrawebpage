@@ -151,9 +151,9 @@ hr.small {
 
 .header {
     display: table;
-    position: relative;
+    position: fixed;
     width: 100%;
-    height: 70%;
+    height: 1000%;
     background: url(../img/bg.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -162,6 +162,17 @@ hr.small {
 }
 
 /* About */
+
+
+
+.circular {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	background: url(../img/myphoto.jpg) no-repeat;
+	}
 
 .about {
     padding: 50px 0;
