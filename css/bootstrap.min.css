@@ -1565,7 +1565,7 @@ p {
 }
 
 .text-primary {
-    color: #337ab7
+    color: #4caf50
 }
 
 a.text-primary:focus,a.text-primary:hover {
@@ -1605,7 +1605,7 @@ a.text-danger:focus,a.text-danger:hover {
 }
 
 .bg-primary {
-    color: #fff;
+    color: #0c0c0c;
     background-color: #4CAF50
 }
 
